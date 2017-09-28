@@ -5,14 +5,13 @@
 #==============================================================================
 set -o nounset
 
-: "${NC_CMD_ARGS:?Required environment variable NC_CMD_ARGS unset}"
-if [ $? -eq 0 ] ; then 
-  echo "cmd: /usr/bin/nc ${NC_CMD_ARGS}" 
-  while true;
+#: "${NC_CMD_ARGS:?Required environment variable NC_CMD_ARGS unset}"
+#if [ $? -eq 0 ] ; then 
+#  echo "cmd: /usr/bin/nc ${NC_CMD_ARGS}" 
+while true;
   do
-    for service in ${NC_CMD_ARGS}
+    for address in ${ADDRESSES}
     do
-      /bin/nc -p ${SERVICE_PORT} $service
+      /bin/nc -w 2 -p ${SERVICE_PORT} $address
     done
   done  
-fi 

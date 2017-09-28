@@ -18,9 +18,9 @@ spec:
     spec:
       containers:
         - name: nc-pod
-          image: quay.io/samsung_cnct/nc-pod:latest 
+          image: quay.io/liljenstolpe/nc-client-pod:latest
           env:
-            - name: NC_CMD_ARGS
+            - name: ADDRESSES
               value: "LIST OF SERVICE ADDRESSES TO CONNECT"
             - name: SERVICE_PORT
-	      value: 9999
+              value: 9999
