@@ -13,6 +13,8 @@ spec:
       labels:
         app: nc-pod
         version: 0.1.0
+        stack: b
+        cluster: public
     spec:
       containers:
         - name: nc-pod
