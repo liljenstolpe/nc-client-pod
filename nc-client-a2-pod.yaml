@@ -1,10 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nc-pod 
+  name: nc-client-a2-pod 
   labels:
-    name: nc-pod
-    app: nc-pod
+    name: nc-client-a2-pod
+    app: nc-client-a2-pod
     version: 0.1.0
 spec:
   replicas: 1
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: nc-pod
-          image: quay.io/liljenstolpe/nc-client-pod:latest
+          image: quay.io/samsung_cnct/nc-pod:latest 
           env:
             - name: ADDRESSES
               value: "LIST OF SERVICE ADDRESSES TO CONNECT"
