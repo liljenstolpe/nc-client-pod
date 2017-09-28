@@ -12,7 +12,7 @@ if [ $? -eq 0 ] ; then
   do
     for service in ${NC_CMD_ARGS}
     do
-      /bin/nc $service
+      /bin/nc -p ${SERVICE_PORT} $service
     done
   done  
 fi 
